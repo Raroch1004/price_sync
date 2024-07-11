@@ -4,7 +4,7 @@ from django.db import models
 
 class Site(models.Model):
     name = models.CharField(max_length=255)
-    domain = models.URLField(max_length=500, null=True)
+    domain = models.URLField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return self.name
